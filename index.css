@@ -1,0 +1,535 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #4c0b1e;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: rgba(203, 3, 3, 0);
+  padding: 1em;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: background 0.5s ease-in-out;
+}
+
+/* nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 3em;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  width: 100%;
+} */
+
+.navbar-default {
+  /* display: flex; */
+  border: none;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 3em; */
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  width: 100%;
+}
+
+/* Move navbar elements to the right */
+.navbar-nav {
+  float: right ! important;
+}
+
+/* Adjust the placement of navbar elements */
+.navbar-nav > li {
+  margin-left: 15px ! important; /* Adjust the spacing between navbar elements */
+}
+
+/* Change font color to yellow */
+.navbar-nav > li > a {
+  color: rgb(0, 0, 0) ! important;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.3s ease-in-out;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+}
+
+nav a:hover {
+  color: #d60f05;
+}
+
+/* ... (previous styles) ... */
+
+nav #sjbit {
+  font-family: "Cursive", sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  color: #ffffff;
+  animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 10px #eeede6, 0 0 20px #eeede6, 0 0 30px #eeede6;
+  }
+
+  to {
+    text-shadow: 0 0 5px #f30505, 0 0 10px #f30505, 0 0 15px #f30505;
+  }
+}
+
+/* ... (remaining styles) ... */
+
+main {
+  background: url("https://e1.pxfuel.com/desktop-wallpaper/891/535/desktop-wallpaper-dark-screen-on-dog.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding: 70px 1em 1em;
+}
+
+main .title-container {
+  text-align: center;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+h1 {
+  position: relative;
+  font-family: "Rubik Burned";
+  font-size: calc(2.5vw + 20px);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: 0 0 0.15em #f00b0b;
+  user-select: none;
+  white-space: nowrap;
+  filter: blur(0.007em);
+  animation: shake 2.5s linear forwards,
+    spooky 2s ease-in-out infinite alternate;
+  margin-bottom: 10px; /* Add or adjust the margin as needed */
+}
+
+h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  -webkit-clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+  clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+}
+
+h1::before,
+h1::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+h1::before {
+  animation: crack1 2.5s linear forwards;
+  -webkit-clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+}
+
+h1::after {
+  animation: crack2 2.5s linear forwards;
+  -webkit-clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
+  clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
+}
+
+@keyframes shake {
+  5%,
+  15%,
+  25%,
+  35%,
+  55%,
+  65%,
+  75%,
+  95% {
+    filter: blur(0.018em);
+    transform: translateY(0.018em) rotate(0deg);
+  }
+
+  10%,
+  30%,
+  40%,
+  50%,
+  70%,
+  80%,
+  90% {
+    filter: blur(0.01em);
+    transform: translateY(-0.018em) rotate(0deg);
+  }
+
+  20%,
+  60% {
+    filter: blur(0.03em);
+    transform: translate(-0.018em, 0.018em) rotate(0deg);
+  }
+
+  45%,
+  85% {
+    filter: blur(0.03em);
+    transform: translate(0.018em, -0.018em) rotate(0deg);
+  }
+
+  100% {
+    filter: blur(0.007em);
+    transform: translate(0) rotate(-0.5deg);
+  }
+}
+@keyframes spooky {
+  0%,
+  100% {
+    color: #ffffff;
+    text-shadow: 0 0 0.15em #f00b0b;
+  }
+  50% {
+    color: #f00b0b;
+    text-shadow: 0 0 0.3em #f00b0b;
+  }
+}
+
+@keyframes crack1 {
+  0%,
+  95% {
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    transform: translate(-51%, -48%);
+  }
+}
+
+@keyframes crack2 {
+  0%,
+  95% {
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    transform: translate(-49%, -53%);
+  }
+}
+
+main h3 {
+  margin-top: 10px; /* Adjust the margin as needed */
+  margin-bottom: 40px; /* Adjust the margin as needed */
+  color: #f4f4f4;
+  text-shadow: 0 0 0.25em #f00b0b;
+  font-family: "Poppins";
+  font-size: 2em;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.events-section {
+  background: #fff;
+  padding: 50px 10px;
+  background-color: #4c0b1e;
+}
+
+.events-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.event-card {
+  background: #d80606;
+  border-radius: 8px;
+  text-align: left;
+  color: #fff;
+  width: calc(33.33% - 20px);
+  height: 500px;
+  /* Increased height */
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+  /* Added margin to separate the cards */
+}
+
+.event-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.event-card h2 {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  margin: 0;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.event-card p {
+  display: none;
+}
+
+.about-section {
+  padding: 50px 10px;
+  text-align: center;
+}
+
+.events-section h3,
+.additional-card h2 {
+  font-family: "Climate Crisis", sans-serif;
+  font-size: 4em;
+  text-align: center;
+  color: aliceblue;
+  letter-spacing: 5px;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Add the following styles for the button */
+.explore-button {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "monospace";
+}
+
+.explore-more-button {
+  background: transparent;
+  border: 2px solid #800000;
+  /* Maroon border */
+  color: #fff;
+  padding: 15px 40px;
+  /* Adjusted padding for increased width and height */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  position: relative;
+  clip-path: polygon(
+    10% 0%,
+    90% 0%,
+    100% 10%,
+    100% 90%,
+    90% 100%,
+    10% 100%,
+    0% 90%,
+    0% 10%
+  );
+  /* Square with rounded corners */
+  border-radius: 15px;
+  /* Rounded corners */
+  margin-top: 20px;
+  /* Added margin to move the button lower */
+}
+
+.explore-more-button:hover {
+  background: #800000;
+  /* Maroon background on hover */
+}
+
+.additional-section {
+  padding: 100px; /* Increase the top and bottom padding */
+  background: linear-gradient(to bottom, #4c0b1e, black);
+}
+
+.additional-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.additional-card {
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  width: calc(50% - 20px);
+  height: 300px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.additional-card h2 {
+  margin: 20px 0;
+  font-size: 3.1em;
+}
+
+.additional-card p {
+  padding: 0 20px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-family: "Poppins";
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  main h1 {
+    font-size: 60px;
+  }
+
+  .events-container {
+    justify-content: center;
+  }
+
+  .event-card {
+    width: calc(50% - 20px);
+    /* 50% width for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    height: 30px;
+    padding: 5px;
+  }
+
+  nav a {
+    line-height: 30px;
+  }
+
+  main h1 {
+    font-size: 40px;
+  }
+
+  .events-container {
+    justify-content: center;
+  }
+
+  .event-card {
+    width: calc(100% - 20px);
+    /* 100% width for smaller screens */
+  }
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Add this media query at the end of your CSS file */
+@media only screen and (max-width: 768px) {
+  /* Mobile Styles */
+
+  /* Header Styles */
+  nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav a {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  /* Main Styles */
+  main {
+    padding: 20px 10px;
+  }
+
+  main h1 {
+    font-size: 30px;
+  }
+
+  /* Events Section Styles */
+  .events-container {
+    justify-content: flex-start;
+  }
+
+  .event-card {
+    width: calc(100% - 20px);
+    height: auto;
+  }
+
+  /* About Section Styles */
+  .additional-cards {
+    flex-direction: column;
+  }
+
+  .additional-card {
+    width: calc(100% - 20px);
+    height: auto;
+  }
+
+  /* Footer Styles */
+  footer {
+    padding: 10px;
+  }
+
+  /* Global Font Size Adjustment */
+  body {
+    font-size: 14px;
+  }
+
+  /* Additional Adjustments */
+  .explore-button {
+    margin-top: 10px;
+  }
+}
+
+/* Media Query for mobile screens */
+@media only screen and (max-width: 768px) {
+  /* ... Other existing styles ... */
+
+  /* Hide default nav links on mobile */
+  nav a {
+    display: none;
+  }
+
+  /* Show SJBIT link on mobile */
+  a#sjbit {
+    display: block;
+  }
+
+  /* Show hamburger icon on mobile */
+  .hamburger-icon {
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    margin-right: 10px;
+    margin-left: 0px;
+  }
+
+  /* Hide dropdown initially on mobile */
+  #mobile-dropdown {
+    display: none;
+  }
+
+  /* Display dropdown on mobile when hamburger is clicked */
+  /* Add this at the end of your CSS file */
+  .show-dropdown {
+    display: block !important;
+  }
+}
